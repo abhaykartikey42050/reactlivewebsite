@@ -16,10 +16,10 @@ const App = () => {
     <head><title>Hello</title></head>
     <Navbar />
     <Switch>
-      <Route exact path='/' component={Home} />
-      <Route exact path='/about' component={About} />
-      <Route exact path='/services' component={Services} />
-      <Route exact path='/contact' component={Contact} />
+      <Route exact path={process.env.PUBLIC_URL +'/'} component={Home} />
+      <Route exact path={process.env.PUBLIC_URL +'/about'} component={About} />
+      <Route exact path={process.env.PUBLIC_URL +'/services'} component={Services} />
+      <Route exact path={process.env.PUBLIC_URL +'/contact'} component={Contact} />
       <Redirect to='/'/>
     </Switch>
     <Footer />
